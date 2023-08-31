@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 });
 
 // GET redis data
-router.get('/info', async (req, res) => {
+router.get('/statistics', async (req, res) => {
   const data = await redis.getAsync('added_todos')
 
   if(!data) res.send({ added_todos: 0})
